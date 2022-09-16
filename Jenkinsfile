@@ -10,7 +10,7 @@ pipeline {
 
         stage ('Deploy') {
             steps {
-                sh 'docker run -d -ti -name test-application test-app'
+                sh 'docker run -d --name test-application -p 8088:8080 test-app'
             }
         }
     }
